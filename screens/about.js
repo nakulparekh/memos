@@ -22,8 +22,8 @@ export default function About(){
             <DetailCard>
                 <Text style={globalStyles.titleText}>Contact</Text>
                 <DeleteButton 
-                    text="nakulnp009@gmail.com"
-                    onPress={() => Linking.openURL('mailto:nakulnp009@gmail.com') }
+                    text="nnpjunk@gmail.com"
+                    onPress={() => Linking.openURL('mailto:nnpjunk@gmail.com') }
                     
                     // style={{backgroundColor:'maroon'}}
                 />

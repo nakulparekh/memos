@@ -53,6 +53,9 @@ export default function Home({navigation}){
         setMemos(memos);
         save(memos);
 
+        console.log('Edited Memo');
+        console.log(memos);
+
     }
 
     const STORAGE_KEY = '@save_memo'
