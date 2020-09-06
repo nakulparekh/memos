@@ -1,0 +1,15 @@
+npm install react
+npm install react-native
+npm install react-navigation
+npm install react-navigation-drawer
+npm install react-navigation-stack
+npm install formik
+npm install yup
+npm install @react-native-community/masked-view
+npm install react-native-screens
+npm install -g expo-cli
+npm i react-native-modalize
+expo install react-native-gesture-handler
+expo install react-native-reanimated
+npm i @react-native-community/async-storage
+npm install react-native-check-box --save

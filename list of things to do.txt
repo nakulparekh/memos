@@ -1,0 +1,46 @@
+------------------------------------
+LEFT TO LEARN (✔ ✘):
+------------------------------------
+- AsyncStorage (keep files locally) ✔
+
+------------------------------------
+WITHIN ADD BUTTON:
+------------------------------------
+- From add button, change modal to screen ✘
+- Add more fields for forms
+	- Memo color beside name ☐
+		- Subject will display colour as vertical bar to the left of course name on home
+	- Start/Finish w calendar popup ✘
+	- Create categories with add button ✘
+	- Upon press, form is created for category name and weight ✘
+	- Display total weight with yup validation error message ✘
+
+------------------------------------
+WITHIN SUBJECT BUTTONS ON HOME:
+------------------------------------
+- Create summary bubble for each course from all field information ✘
+	- Display subject name ✘
+	- Calculate percentage and gpa ✘
+- Categories are created from add button ✘
+- Display category name on left and weighted avg on right ✘
+- Under category, 3 blank field, and add button under ✘
+	- Name ✘
+	- Weight ✘
+	- Grade ✘
+- Upon press, add button adds more fields ✘
+- Create delete option ✔
+- Make form editable ☐
+
+------------------------------------
+HOMEPAGE:
+------------------------------------
+- Add background image for when list is empty ☐
+
+------------------------------------
+WITHIN NAVIGATION SIDEBAR:
+------------------------------------
+- Create GPA to percentage conversion page ✘
+	- Dropdown button to change between 4 gpa scale options ✘
+	- Display Conversion "table" ✘
+- Create settings page ✘
+	- Setting to change gpa scale ✘
