@@ -1,12 +1,34 @@
 import React from 'react';
-import {StyleSheet, View, Text} from 'react-native';
+import {StyleSheet, View, Text, Linking, Button} from 'react-native';
 import { globalStyles } from '../styles/global';
+import DetailCard from '../shared/detailCard';
+import DeleteButton from '../shared/deleteButton';
+
 
 
 export default function About(){
     return(
         <View style={globalStyles.container}>
-            <Text style={globalStyles.titleText}>About Screen</Text>
+            <DetailCard>
+                <Text style={globalStyles.titleText}>Version</Text>
+                <Text style={globalStyles.descriptionText}>2020.09.08</Text>
+            </DetailCard>
+            <DetailCard>
+                <Text style={globalStyles.titleText}>About the app</Text>
+                <Text style={globalStyles.descriptionText}>
+                    A simple cross-platform mobile app to become familiar with React Native!
+                </Text>
+            </DetailCard>
+            <DetailCard>
+                <Text style={globalStyles.titleText}>Contact</Text>
+                <DeleteButton 
+                    text="nakulnp009@gmail.com"
+                    onPress={() => Linking.openURL('mailto:nakulnp009@gmail.com') }
+                    
+                    // style={{backgroundColor:'maroon'}}
+                />
+
+            </DetailCard>
         </View>
     )
 }

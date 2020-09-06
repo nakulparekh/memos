@@ -14,7 +14,7 @@ export default function DetailCard(props){
 const styles = StyleSheet.create({
     card:{
         marginHorizontal: 4,
-        marginVertical: 10,
+        marginVertical: 15,
         flexDirection: 'row',
         },
     cardContent:{

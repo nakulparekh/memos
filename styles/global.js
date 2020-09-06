@@ -39,8 +39,8 @@ export const globalStyles = StyleSheet.create({
         fontSize: 20,
     },
     inputDescription:{
-        borderWidth: 1,
-        borderColor: 'grey',
+        // borderWidth: 1,
+        // borderColor: 'grey',
         paddingLeft:10,
         fontSize: 18,
         justifyContent: 'flex-start',
