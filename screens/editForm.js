@@ -1,11 +1,9 @@
 import React from 'react';
-import { StyleSheet, TextInput, View, Text } from 'react-native';
+import { StyleSheet, TextInput, View } from 'react-native';
 import { globalStyles } from '../styles/global.js';
 import { Formik } from 'formik';
 import * as yup from 'yup';
 import { MaterialIcons } from '@expo/vector-icons';
-
-
 
 const memoSchema = yup.object({
     memo: yup.string()
@@ -23,16 +21,8 @@ export default function EditForm({ editMemo, memo, navigation }) {
                 validationSchema={memoSchema}
                 onSubmit={( values, actions ) => {
                     actions.resetForm();
-                    console.log('resetForm memo');
-                    // console.log(memo)
-                    // removeMemo(memo.key)
-                    // addMemo(values);
-                    // removeMemo(memo.key)
                     editMemo(values, memo.key);
                     navigation.navigate('Home');
-
-                    // console.log('values');
-                    // console.log(values);
                 }}
             >
                 {(props) => (
@@ -42,7 +32,6 @@ export default function EditForm({ editMemo, memo, navigation }) {
                                 <TextInput 
                                     style={globalStyles.inputTitle}
                                     maxLength = {24}
-                                    // placeholder='Memo Title'
                                     onChangeText={props.handleChange('memo')}
                                     value={props.values.memo}
                                     onBlur={props.handleBlur('memo')}
@@ -52,17 +41,12 @@ export default function EditForm({ editMemo, memo, navigation }) {
                                     style = {styles.modalSave}
                                     size={40}
                                     onPress={props.handleSubmit}
-                                    // onPress={() => {
-                                    //     props.handleSubmit;
-                                    //     navigation.navigate('Home');
-                                    // }}
                                 />
                             </View>
                             <TextInput
                                 multiline
                                 minHeight={250}
                                 style={globalStyles.inputDescription}
-                                // placeholder='Description'
                                 onChangeText={props.handleChange('description')}
                                 value={props.values.description}
                                 onBlur={props.handleBlur('description')}
@@ -77,7 +61,6 @@ export default function EditForm({ editMemo, memo, navigation }) {
 
 const styles = StyleSheet.create({
     modalSave:{
-        // backgroundColor: '#efefef',
         color: '#242424',
         width: 60,
         paddingLeft: 10,

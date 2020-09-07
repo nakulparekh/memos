@@ -1,10 +1,8 @@
 import React from 'react';
-import {StyleSheet, View, Text, Linking, Button} from 'react-native';
+import { View, Text, Linking } from 'react-native';
 import { globalStyles } from '../styles/global';
 import DetailCard from '../shared/detailCard';
 import DeleteButton from '../shared/deleteButton';
-
-
 
 export default function About(){
     return(
@@ -24,10 +22,7 @@ export default function About(){
                 <DeleteButton 
                     text="nnpjunk@gmail.com"
                     onPress={() => Linking.openURL('mailto:nnpjunk@gmail.com') }
-                    
-                    // style={{backgroundColor:'maroon'}}
                 />
-
             </DetailCard>
         </View>
     )

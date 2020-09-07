@@ -1,9 +1,7 @@
 import React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
 export default function HomeCard(props){
-    
-    
     return (
         <View style={styles.card}>
             <View style={styles.cardContent}>

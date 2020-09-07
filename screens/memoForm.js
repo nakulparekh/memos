@@ -1,10 +1,8 @@
 import React from 'react';
-import { StyleSheet, TextInput, View, Text } from 'react-native';
+import { StyleSheet, TextInput, View } from 'react-native';
 import { globalStyles } from '../styles/global.js';
 import { Formik } from 'formik';
 import * as yup from 'yup';
-import SaveButton from '../shared/saveButton';
-import InputScrollView from 'react-native-input-scroll-view';
 import { MaterialIcons } from '@expo/vector-icons';
 
 
@@ -25,10 +23,7 @@ export default function MemoForm({ addMemo }) {
                 validationSchema={memoSchema}
                 onSubmit={( values, actions ) => {
                     actions.resetForm();
-                    console.log('resetForm');
                     addMemo(values);
-                    console.log('values');
-                    console.log(values);
                 }}
             >
                 {(props) => (

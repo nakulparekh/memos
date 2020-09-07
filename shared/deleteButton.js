@@ -16,7 +16,6 @@ const styles = StyleSheet.create({
     button:{
         borderRadius: 8,
         paddingVertical: 10,
-        // width: 185,
         marginRight: 5,
         backgroundColor: 'maroon',
         justifyContent: 'flex-end',

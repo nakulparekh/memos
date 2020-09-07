@@ -4,7 +4,6 @@ export const globalStyles = StyleSheet.create({
     container:{
         flex: 1,
         padding: 2,
-        
     },
     titleText:{
         fontSize: 22,
@@ -17,7 +16,6 @@ export const globalStyles = StyleSheet.create({
         color: '#333'
     },
     buttonContainer:{
-        // flex: 3,
         justifyContent: 'flex-end',
         padding: 15,
         flexDirection:'column'
@@ -27,7 +25,6 @@ export const globalStyles = StyleSheet.create({
     },
     deleteContainer:{
         justifyContent: 'flex-end',
-        
     },
     paragraph:{
         marginVertical: 8,
@@ -39,8 +36,6 @@ export const globalStyles = StyleSheet.create({
         fontSize: 20,
     },
     inputDescription:{
-        // borderWidth: 1,
-        // borderColor: 'grey',
         paddingLeft:10,
         fontSize: 18,
         justifyContent: 'flex-start',

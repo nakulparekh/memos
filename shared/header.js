@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { StyleSheet, Text, View, Modal } from 'react-native';
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
-import Home from '../screens/home';
 
 export default function Header({ navigation, title }){
     

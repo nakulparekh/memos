@@ -11,7 +11,6 @@ export default function SaveButton({ text, onPress }) {
     )
 }
 
-
 const styles = StyleSheet.create({
     button:{
         borderRadius:8,

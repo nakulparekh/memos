@@ -14,83 +14,57 @@ export default function Home({navigation}){
 
     const addMemo = (memo) => {
         memo.key = Math.random().toString();
-        console.log('random key')
-        console.log(memo.key)
-
         newMemos = [memo, ...memos]
 
         setMemos(newMemos);
         save(newMemos);
 
         setModalOpen(false);
-
-        console.log('add memo')
-        // console.log(memos)
     }
 
     const removeMemo = (memoKey) => {
-        console.log('memokey:')
-        console.log(memoKey);
-        console.log('remove memo')
         newMemos = memos.filter((memo) => {
             return memo.key != memoKey
         });
         
         setMemos(newMemos);
-
         save(newMemos);
-        console.log('newMemos');
-        console.log(newMemos);
     }
 
     const editMemo = (memoNew, memoOldKey) => {
         note = memos.find(note => note.key == memoOldKey)
-
-        console.log("editing note")
         note.memo = memoNew.memo;
         note.description = memoNew.description;
 
-        setMemos(memos);
-        save(memos);
-
-        console.log('Edited Memo');
-        console.log(memos);
-
+        newMemos = [...memos]
+        setMemos(newMemos);
+        save(newMemos);
     }
 
     const STORAGE_KEY = '@save_memo'
 
     const save = async(memosToSave) => {
         try {
-            console.log('running save');
             await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(memosToSave))
         } catch(err){
             alert('error')
-            console.log(err)
         }
-
-        // console.log(memosToSave)
     };
 
     const load = async() => {
         try{
-            console.log('running load');
             const jsonMemo = await AsyncStorage.getItem(STORAGE_KEY)
-            console.log('load await');
             
             if(jsonMemo != null){
-                console.log('entered load if');
                 setMemos(JSON.parse(jsonMemo));
             }
 
         } catch(err){
             alert('error')
-            console.log(err)
         }
     };
 
     useEffect(() => {
-        console.log('useEffect');
         load()
     }, [])
 
@@ -100,7 +74,6 @@ export default function Home({navigation}){
                 visible={modalOpen} 
                 animationType='slide'
                 >
-                
                 <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
                     <View style={styles.modalContent}>
                         <View style={styles.modalHeader}>
@@ -115,7 +88,6 @@ export default function Home({navigation}){
                         <ScrollView>
                             <MemoForm addMemo={addMemo}/>
                         </ScrollView>
-                        
                     </View>
                 </TouchableWithoutFeedback>
             </Modal>
@@ -127,7 +99,6 @@ export default function Home({navigation}){
                     <TouchableOpacity 
                         onPress={() => navigation.navigate('MemoDetails', {
                             memo: item,
-                            addMemo: addMemo,
                             removeMemo: removeMemo,
                             editMemo: editMemo,
                         })}
@@ -146,7 +117,6 @@ export default function Home({navigation}){
                 onPress={() => setModalOpen(true)}
             />
         </View>
-
     )
 }
 
@@ -183,7 +153,6 @@ const styles = StyleSheet.create({
         alignSelf: 'flex-start',
         position: 'relative', 
     },
-
     modalSave:{
         backgroundColor: '#fff',
         color: '#242424',
