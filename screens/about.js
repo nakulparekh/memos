@@ -9,19 +9,19 @@ export default function About(){
         <View style={globalStyles.container}>
             <DetailCard>
                 <Text style={globalStyles.titleText}>Version</Text>
-                <Text style={globalStyles.descriptionText}>2020.09.08</Text>
+                <Text style={globalStyles.descriptionText}>2020.09.07</Text>
             </DetailCard>
             <DetailCard>
                 <Text style={globalStyles.titleText}>About the app</Text>
                 <Text style={globalStyles.descriptionText}>
-                    A simple cross-platform mobile app to become familiar with React Native!
+                    A simple cross-platform note-taking app made using React Native! 
                 </Text>
             </DetailCard>
             <DetailCard>
                 <Text style={globalStyles.titleText}>Contact</Text>
                 <DeleteButton 
-                    text="nnpjunk@gmail.com"
-                    onPress={() => Linking.openURL('mailto:nnpjunk@gmail.com') }
+                    text="memosapp123@gmail.com"
+                    onPress={() => Linking.openURL('mailto:memosapp123@gmail.com') }
                 />
             </DetailCard>
         </View>
