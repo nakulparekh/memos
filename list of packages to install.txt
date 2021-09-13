@@ -13,3 +13,10 @@ expo install react-native-gesture-handler
 expo install react-native-reanimated
 npm i @react-native-community/async-storage
 npm install react-native-check-box --save
+
+
+    // "splash": {
+    //   "image": "./assets/splash.png",
+    //   "resizeMode": "contain",
+    //   "backgroundColor": "#ffffff"
+    // },
